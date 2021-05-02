@@ -1,0 +1,452 @@
+# SCHEMA "OPC UA"
+dn: cn=OPC UA, ou=schema
+objectclass: metaSchema
+objectclass: top
+cn: OPC UA
+m-dependencies: system
+
+dn: ou=attributetypes, cn=OPC UA, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: attributetypes
+
+dn: m-oid=1.3.6.1.4.1.48279.1.1, ou=attributetypes, cn=OPC UA, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.1.1
+m-name: uniformResourceIdentifier
+m-description: URI for identifying namespaces.
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.48279.1.2, ou=attributetypes, cn=OPC UA, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.1.2
+m-name: nodeId
+m-description: IEC 62541-3:2015 This Attribute is composed of three elements tha
+ t identify a Node within a Server.
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.48279.1.3, ou=attributetypes, cn=OPC UA, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.1.3
+m-name: nodeClass
+m-description: IEC 62541-3:2015 The NodeClass Attribute identifies the NodeClass
+  of a Node.
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.48279.1.13, ou=attributetypes, cn=OPC UA, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.1.13
+m-name: browseName
+m-description: IEC 62541-3:2015 Nodes have a BrowseName Attribute that is used a
+ s a non-localised human-readable name when browsing the AddressSpace to create
+ paths out of BrowseNames.
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.48279.1.14, ou=attributetypes, cn=OPC UA, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.1.14
+m-name: displayName
+m-description: IEC 62541-3:2015 The DisplayName Attribute contains the localised
+  name of the Node.
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.48279.1.4, ou=attributetypes, cn=OPC UA, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.1.4
+m-name: writeMask
+m-description: IEC 62541-3:2015 The optional WriteMask Attribute exposes the pos
+ sibilities of a client to write the Attributes of the Node.
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.27
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.48279.1.5, ou=attributetypes, cn=OPC UA, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.1.5
+m-name: valueRank
+m-description: IEC 62541-3:2015 This Attribute indicates whether the Value Attri
+ bute of the Variable is an array and how many dimensions the array has.
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.27
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.48279.1.9, ou=attributetypes, cn=OPC UA, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.1.9
+m-name: accessLevel
+m-description: IEC 62541-3:2015 The AccessLevel Attribute is used to indicate ho
+ w the Value of a Variable can be accessed (read/write) and if it contains curre
+ nt and/or historic data.
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.27
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.48279.1.6, ou=attributetypes, cn=OPC UA, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.1.6
+m-name: arrayDimensions
+m-description: IEC 62541-3:2015 This Attribute specifies the maximum supported l
+ ength of each dimension.
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.48279.1.15, ou=attributetypes, cn=OPC UA, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.1.15
+m-name: containsNoLoops
+m-description:: SUVDIDYyNTQxLTM6MjAxNSBJZiBzZXQgdG8g4oCcdHJ1ZeKAnSB0aGlzIEF0dHJp
+ YnV0ZSBpbmRpY2F0ZXMgdGhhdCBieSBmb2xsb3dpbmcgdGhlIFJlZmVyZW5jZXMgaW4gdGhlIGNvbnR
+ leHQgb2YgdGhlIFZpZXcgdGhlcmUgYXJlIG5vIGxvb3BzLCBpLmUuIHN0YXJ0aW5nIGZyb20gYSBOb2
+ RlIOKAnEHigJ0gY29udGFpbmVkIGluIHRoZSBWaWV3IGFuZCBmb2xsb3dpbmcgdGhlIGZvcndhcmQgU
+ mVmZXJlbmNlcyBpbiB0aGUgY29udGV4dCBvZiB0aGUgVmlldyBOb2RlIOKAnEHigJ0gd2lsbCBub3Qg
+ YmUgcmVhY2hlZCBhZ2Fpbi4=
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.7
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.48279.1.8, ou=attributetypes, cn=OPC UA, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.1.8
+m-name: dataType
+m-description: IEC 62541-3:2015 NodeId of the DataType definition for the Value
+ Attribute.
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.48279.1.12, ou=attributetypes, cn=OPC UA, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.1.12
+m-name: eventNotifier
+m-description: IEC 62541-3:2015 The EventNotifier Attribute is used to indicate
+ if the Node can be used to subscribe to Events or to read / write historic Even
+ ts.
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.6
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.48279.1.16, ou=attributetypes, cn=OPC UA, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.1.16
+m-name: executable
+m-description:: SUVDIDYyNTQxLTM6MjAxNSBUaGUgRXhlY3V0YWJsZSBBdHRyaWJ1dGUgaW5kaWNh
+ dGVzIGlmIHRoZSBNZXRob2QgaXMgY3VycmVudGx5IGV4ZWN1dGFibGUgKOKAnEZhbHNl4oCdIG1lYW5
+ zIG5vdCBleGVjdXRhYmxlLCDigJxUcnVl4oCdIG1lYW5zIGV4ZWN1dGFibGUpLg==
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.7
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.48279.1.10, ou=attributetypes, cn=OPC UA, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.1.10
+m-name: historizing
+m-description: IEC 62541-3:2015 The Historizing Attribute indicates whether the
+ Server is actively collecting data for the history of the Variable.
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.7
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.48279.1.17, ou=attributetypes, cn=OPC UA, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.1.17
+m-name: inverseName
+m-description: IEC 62541-3:015 The inverse name of the Reference, which is the m
+ eaning of the ReferenceType as seen from the TargetNode.
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.48279.1.18, ou=attributetypes, cn=OPC UA, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.1.18
+m-name: isAbstract
+m-description: IEC 62541-3:2015 A boolean Attribute with the following values: T
+ RUE it is an abstract VariableType, i.e. no Variable of this type shall exist,
+ only of its subtypes. FALSE it is not an abstract VariableType, i.e. Variables
+ of this type can exist.
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.7
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.48279.1.11, ou=attributetypes, cn=OPC UA, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.1.11
+m-name: minimumSamplingInterval
+m-description:: SUVDIDYyNTQxLTM6MjAxNSBUaGUgTWluaW11bVNhbXBsaW5nSW50ZXJ2YWwgQXR0
+ cmlidXRlIGluZGljYXRlcyBob3cg4oCcY3VycmVudOKAnSB0aGUgVmFsdWUgb2YgdGhlIFZhcmlhYmx
+ lIHdpbGwgYmUga2VwdC4=
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.27
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.48279.1.19, ou=attributetypes, cn=OPC UA, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.1.19
+m-name: symmetric
+m-description: IEC 62541-3:2015 A boolean Attribute with the following values: T
+ RUE the meaning of the ReferenceType is the same as seen from both the SourceNo
+ de and the TargetNode. FALSE the meaning of the ReferenceType as seen from the
+ TargetNode is the inverse of that as seen from the SourceNode.
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.7
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.48279.1.7, ou=attributetypes, cn=OPC UA, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.1.7
+m-name: value
+m-description: IEC 62541-3:2015 The most recent value of the Variable that the S
+ erver has.
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+m-singleValue: TRUE
+
+dn: m-oid=1.3.6.1.4.1.48279.1.20, ou=attributetypes, cn=OPC UA, ou=schema
+objectclass: metaAttributeType
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.1.20
+m-name: referenceToParent
+m-description: Additional attribute besides OPC UA specification to identify ref
+ erence type to parent node.
+m-syntax: 1.3.6.1.4.1.1466.115.121.1.15
+
+dn: ou=comparators, cn=OPC UA, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: comparators
+
+dn: ou=ditcontentrules, cn=OPC UA, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: ditcontentrules
+
+dn: ou=ditstructurerules, cn=OPC UA, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: ditstructurerules
+
+dn: ou=matchingrules, cn=OPC UA, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: matchingrules
+
+dn: ou=matchingruleuse, cn=OPC UA, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: matchingruleuse
+
+dn: ou=nameforms, cn=OPC UA, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: nameforms
+
+dn: ou=normalizers, cn=OPC UA, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: normalizers
+
+dn: ou=objectclasses, cn=OPC UA, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: objectClasses
+
+dn: m-oid=1.3.6.1.4.1.48279.2.1, ou=objectclasses, cn=OPC UA, ou=schema
+objectclass: metaObjectClass
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.2.1
+m-name: opcUaServer
+m-description: Describes the object of an OPC UA Server.
+m-supObjectClass: top
+
+dn: m-oid=1.3.6.1.4.1.48279.2.13, ou=objectclasses, cn=OPC UA, ou=schema
+objectclass: metaObjectClass
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.2.13
+m-name: externalNode
+m-description: Extension for mapping multiple referenced OPC UA nodes within the
+  tree structure of LDAP.
+m-supObjectClass: top
+m-must: nodeId
+m-must: referenceToParent
+
+dn: m-oid=1.3.6.1.4.1.48279.2.2, ou=objectclasses, cn=OPC UA, ou=schema
+objectclass: metaObjectClass
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.2.2
+m-name: namespace
+m-description: Object for an existing namespace within the OPC UA server.
+m-supObjectClass: top
+m-must: uniformResourceIdentifier
+
+dn: m-oid=1.3.6.1.4.1.48279.2.3, ou=objectclasses, cn=OPC UA, ou=schema
+objectclass: metaObjectClass
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.2.3
+m-name: baseNode
+m-description:: SUVDIDYyNTQxLTM6MjAxNQ0KVGhlIE9QQyBVQSBBZGRyZXNzIFNwYWNlIE1vZGVs
+ IGRlZmluZXMgYSBCYXNlIE5vZGVDbGFzcyBmcm9tIHdoaWNoIGFsbCBvdGhlciBOb2RlQ2xhc3NlcyB
+ hcmUgZGVyaXZlZC4=
+m-supObjectClass: top
+m-typeObjectClass: ABSTRACT
+m-must: browseName
+m-must: displayName
+m-must: nodeClass
+m-must: nodeId
+m-must: referenceToParent
+m-may: description
+m-may: writeMask
+
+dn: m-oid=1.3.6.1.4.1.48279.2.4, ou=objectclasses, cn=OPC UA, ou=schema
+objectclass: metaObjectClass
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.2.4
+m-name: variableNode
+m-description:: SUVDIDYyNTQxLTM6MjAxNQ0KVmFyaWFibGVzIGFyZSB1c2VkIHRvIHJlcHJlc2Vu
+ dCB2YWx1ZXMgd2hpY2ggbWF5IGJlIHNpbXBsZSBvciBjb21wbGV4Lg==
+m-supObjectClass: baseNode
+m-must: accessLevel
+m-must: dataType
+m-must: historizing
+m-must: value
+m-must: valueRank
+m-may: arrayDimensions
+m-may: minimumSamplingInterval
+
+dn: m-oid=1.3.6.1.4.1.48279.2.5, ou=objectclasses, cn=OPC UA, ou=schema
+objectclass: metaObjectClass
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.2.5
+m-name: objectNode
+m-description:: SUVDIDYyNTQxLTM6MjAxNQ0KT2JqZWN0cyBhcmUgdXNlZCB0byByZXByZXNlbnQg
+ c3lzdGVtcywgc3lzdGVtIGNvbXBvbmVudHMsIHJlYWwtd29ybGQgb2JqZWN0cyBhbmQgc29mdHdhcmU
+ gb2JqZWN0cy4=
+m-supObjectClass: baseNode
+m-must: eventNotifier
+
+dn: m-oid=1.3.6.1.4.1.48279.2.6, ou=objectclasses, cn=OPC UA, ou=schema
+objectclass: metaObjectClass
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.2.6
+m-name: typeNode
+m-description: Defines the abstract class for all type nodes.
+m-supObjectClass: baseNode
+m-typeObjectClass: ABSTRACT
+m-must: isAbstract
+
+dn: m-oid=1.3.6.1.4.1.48279.2.7, ou=objectclasses, cn=OPC UA, ou=schema
+objectclass: metaObjectClass
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.2.7
+m-name: objectTypeNode
+m-description:: SUVDIDYyNTQxLTM6MjAxNQ0KT2JqZWN0VHlwZXMgcHJvdmlkZSBkZWZpbml0aW9u
+ cyBmb3IgT2JqZWN0cy4=
+m-supObjectClass: typeNode
+
+dn: m-oid=1.3.6.1.4.1.48279.2.8, ou=objectclasses, cn=OPC UA, ou=schema
+objectclass: metaObjectClass
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.2.8
+m-name: methodNode
+m-description:: SUVDIDYyNTQxLTM6MjAxNQ0KTWV0aG9kcyBkZWZpbmUgY2FsbGFibGUgZnVuY3Rp
+ b25zLg==
+m-supObjectClass: baseNode
+m-must: executable
+
+dn: m-oid=1.3.6.1.4.1.48279.2.9, ou=objectclasses, cn=OPC UA, ou=schema
+objectclass: metaObjectClass
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.2.9
+m-name: referenceTypeNode
+m-description:: SUVDIDYyNTQxLTM6MjAxNQ0KUmVmZXJlbmNlcyBhcmUgZGVmaW5lZCBhcyBpbnN0
+ YW5jZXMgb2YgUmVmZXJlbmNlVHlwZSBOb2Rlcy4=
+m-supObjectClass: typeNode
+m-must: symmetric
+m-may: inverseName
+
+dn: m-oid=1.3.6.1.4.1.48279.2.10, ou=objectclasses, cn=OPC UA, ou=schema
+objectclass: metaObjectClass
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.2.10
+m-name: viewNode
+m-description:: SUVDIDYyNTQxLTM6MjAxNQ0KQWxsIE5vZGVzIGNvbnRhaW5lZCBpbiBhIFZpZXcg
+ c2hhbGwgYmUgYWNjZXNzaWJsZSBzdGFydGluZyBmcm9tIHRoZSBWaWV3IE5vZGUgd2hlbiBicm93c2l
+ uZyBpbiB0aGUgY29udGV4dCBvZiB0aGUgVmlldy4=
+m-supObjectClass: baseNode
+m-must: containsNoLoops
+m-must: eventNotifier
+
+dn: m-oid=1.3.6.1.4.1.48279.2.11, ou=objectclasses, cn=OPC UA, ou=schema
+objectclass: metaObjectClass
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.2.11
+m-name: dataTypeNode
+m-description:: SUVDIDYyNTQxLTM6MjAxNQ0KVGhlIERhdGFUeXBlIE5vZGVDbGFzcyBkZXNjcmli
+ ZXMgdGhlIHN5bnRheCBvZiBhIFZhcmlhYmxlIFZhbHVlLg==
+m-supObjectClass: typeNode
+
+dn: m-oid=1.3.6.1.4.1.48279.2.12, ou=objectclasses, cn=OPC UA, ou=schema
+objectclass: metaObjectClass
+objectclass: metaTop
+objectclass: top
+m-oid: 1.3.6.1.4.1.48279.2.12
+m-name: variableTypeNode
+m-description:: SUVDIDYyNTQxLTM6MjAxNQ0KVmFyaWFibGVUeXBlcyBhcmUgdXNlZCB0byBwcm92
+ aWRlIHR5cGUgZGVmaW5pdGlvbnMgZm9yIFZhcmlhYmxlcy4=
+m-supObjectClass: typeNode
+m-must: dataType
+m-must: valueRank
+m-may: arrayDimensions
+m-may: value
+
+dn: ou=syntaxcheckers, cn=OPC UA, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: syntaxcheckers
+
+dn: ou=syntaxes, cn=OPC UA, ou=schema
+objectclass: organizationalUnit
+objectclass: top
+ou: syntaxes
